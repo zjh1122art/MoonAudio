@@ -1,0 +1,12 @@
+Moon Audio
+
+This repository is a clean-room MoonBit implementation of WAV PCM and Ogg
+Vorbis decoding. It was informed by the following public-domain references:
+
+* stb_vorbis, Sean Barrett, https://github.com/nothings/stb
+  Public domain / dual-licensed MIT.
+* dr_wav, David Reid, https://github.com/mackron/dr_libs
+  Public domain / MIT-0.
+
+No upstream source file is included in this repository. The parser, decoder,
+tests, and documentation here were written for MoonBit.

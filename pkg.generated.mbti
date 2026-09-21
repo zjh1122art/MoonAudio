@@ -1,0 +1,62 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "zjhdev/moon_audio"
+
+// Values
+pub fn decode(Bytes) -> Pcm raise AudioError
+
+// Errors
+pub suberror AudioError {
+  InvalidInput(String)
+  Unsupported(String)
+  Truncated
+} derive(Eq, Show)
+
+// Types and methods
+pub(all) struct AudioInfo {
+  rate : Int
+  channels : Int
+  frames : Int
+  format : String
+} derive(Show)
+
+type BitReader
+
+type Huffman
+
+type HuffmanCode
+
+type OggPacket
+
+type OggReader
+
+pub(all) struct Pcm {
+  rate : Int
+  channels : Int
+  samples : Array[Int16]
+} derive(Show)
+pub fn Pcm::frames(Self) -> Int
+pub fn Pcm::info(Self, String) -> AudioInfo
+pub fn Pcm::resample(Self, Int, Int) -> Self raise AudioError
+pub fn Pcm::to_wav(Self) -> Bytes
+
+type VorbisCodebook
+
+type VorbisDecoder
+
+type VorbisFloor
+
+type VorbisMapping
+
+type VorbisMode
+
+type VorbisResidue
+
+type VorbisSetup
+
+type WavReader
+
+type WavWriter
+
+// Type aliases
+
+// Traits
